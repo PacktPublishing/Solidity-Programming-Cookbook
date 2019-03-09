@@ -1,7 +1,11 @@
+/*
+    @AUTHOR - Raj Jha & Harish Jaggi
+*/
 pragma solidity ^0.5.1;  
 contract StringLessthen32CharecterToByte32 {  
 //conversion of string less than 32 characters long to bytes32
-    function toBytes32(string memory _string) public pure returns (bytes32) {// pure means we are not accessing state nor changing state
+    function toBytes32(string memory _string) public pure returns (bytes32) {//try argument ("Packt solidity Book")
+        // pure means we are not accessing state nor changing state
         // make sure string should be less than 32 characters
         require(bytes(_string).length <= 32); 
         bytes32 _stringBytes;
