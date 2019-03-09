@@ -1,3 +1,6 @@
+/*
+    @AUTHOR - Raj Jha & Harish Jaggi
+*/
 pragma solidity ^0.5.1;
 contract BytesMultiReturner {
     function getData() public pure  returns (uint8, uint8) {
