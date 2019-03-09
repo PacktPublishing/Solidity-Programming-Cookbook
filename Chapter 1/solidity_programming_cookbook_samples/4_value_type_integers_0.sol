@@ -19,7 +19,7 @@ contract InsecureIntegerFlow {
         any amount to destination address.
         */
         require(balanceOf[msg.sender] - _value >= 0);  //this line of code can create disaster.
-        /* Add and subtract new balances */
+        /* balance adjustments */
         balanceOf[msg.sender] -= _value;
         balanceOf[_to] += _value;
     }
