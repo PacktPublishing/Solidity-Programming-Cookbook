@@ -1,3 +1,6 @@
+/*
+    @AUTHOR - Raj Jha & Harish Jaggi
+*/
 pragma solidity ^0.5.1;
 contract GasUsesforBytesAndStrings {
     string constant _string = "Solidity Cook Book";
