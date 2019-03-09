@@ -2,7 +2,7 @@
     @AUTHOR - Raj Jha & Harish Jaggi
 */
 pragma solidity ^0.5.1;
-contract IntegerOverFlow {
+contract InsecureIntegerFlow {
     mapping (address => uint256) public balanceOf;
 
     // INSECURE
