@@ -22,16 +22,18 @@ contract CustomerCustomizationForCar {
     }
   
     mapping(string => CustomizedCar) customerCarMapping; //keep mapping of cars
-
-    function createCustomizedCarForCustomer(string memory vin) public { //create car with customer selected options.
+    //create car with customer selected options.
+    function createCustomizedCarForCustomer(string memory vin) public { //try any unique string as argument i.e ("111")
         customerCarMapping[vin] = CustomizedCar(vin,WheelsChoices.Steel,ColorChoices.yellow,RoofChoices.Vinyl);
     }
     
-    function createDefaultCarForCustomer(string memory vin) public { //create car with default available options.
+    //create car with default available options.
+    function createDefaultCarForCustomer(string memory vin) public { //try any unique string as argument i.e ("222")
         customerCarMapping[vin] = CustomizedCar(vin,defaultWheel,defaultColor,defaultRoof);
     }
-
-    function getCar(string memory vin) public view returns (uint256,uint256,uint256) { //fetch back car information
+    
+    //fetch back car information
+    function getCar(string memory vin) public view returns (uint256,uint256,uint256) { //fetch using unique string i.e ("111") or ("222")
         //enum is convertible to integer.
         return (uint256(customerCarMapping[vin].wheel), uint256(customerCarMapping[vin].color),uint256(customerCarMapping[vin].roof));
     }
