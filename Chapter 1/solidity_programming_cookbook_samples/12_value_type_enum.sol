@@ -1,3 +1,6 @@
+/*
+    @AUTHOR - Raj Jha & Harish Jaggi
+*/
 pragma solidity ^0.5.1;
 //Create cars based on customer customization and default options.
 contract CustomerCustomizationForCar {
