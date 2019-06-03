@@ -7,7 +7,7 @@ contract InsecureIntegerFlow {
 
     // INSECURE
     function transfer(address _to, uint256 _value) public { //Trt arguments (0xca35b7d915458ef540ade6068dfe2f44e8fa733c,200) on remix.
-        balanceOf[msg.sender] = 100; //set balance of code executer address to 100.
+        balanceOf[msg.sender] = 100; //set balance of code executor address to 100.
         /* Check if sender has balance 
         can cause integer overflow. balances[msg.sender] – _value >= 0 condition 
         is always satisfied because uint minus uint operation always results uint and 
